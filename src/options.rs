@@ -378,8 +378,8 @@ impl EnumOptions {
     }
 }
 
-    /// Defaults to `["Debug", "Clone", "Copy", "PartialEq",
-    /// "Eq", "PartialOrd", "Ord", "Hash"]`
+/// Defaults to `["Debug", "Clone", "Copy", "PartialEq",
+/// "Eq", "PartialOrd", "Ord", "Hash"]`
 impl Default for EnumOptions {
     /// ```rust
     /// use config_struct::*;

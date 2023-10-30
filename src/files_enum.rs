@@ -4,9 +4,8 @@ use case::CaseExt;
 
 use crate::{
     error::{Error, GenerationError},
-    files,
-    generation,
-    options::{EnumOptions},
+    files, generation,
+    options::EnumOptions,
     validation,
 };
 
@@ -19,11 +18,11 @@ pub fn generate_files_enum<P: AsRef<Path>>(
         let entry = entry?;
         if entry.file_type()?.is_file() {
             let variant_name = entry
-                    .path()
-                    .file_stem()
-                    .expect("TODO:")
-                    .to_string_lossy()
-                    .to_camel();
+                .path()
+                .file_stem()
+                .expect("TODO:")
+                .to_string_lossy()
+                .to_camel();
 
             if !variant_name.starts_with('.') {
                 keys.push(variant_name);
