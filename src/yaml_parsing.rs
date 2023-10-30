@@ -56,6 +56,7 @@ fn yaml_to_raw_value(
                 fields: values,
             })
         }
+        serde_yaml::Value::Tagged(_) => todo!(),
     }
 }
 
